@@ -3,7 +3,9 @@ dotenv.config();
 
 let token;
 import { tokenStore } from '../../stores/tokenStore';
-tokenStore.subscribe(t => { token = t; });
+tokenStore.subscribe((t) => {
+	token = t;
+});
 
 const CLIENT_ID = process.env['CLIENT_ID'];
 const CLIENT_SECRET = process.env['CLIENT_SECRET'];

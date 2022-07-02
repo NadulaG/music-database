@@ -27,7 +27,8 @@
 <div class="card lg:card-side bg-base-200 shadow-xl">
 	<figure><img src={song.album.images[0].url} alt="Album" /></figure>
 	<div class="card-body">
-		<h2 class="card-title">{song.name}
+		<h2 class="card-title">
+			{song.name}
 			{#if song.explicit}
 				<i class="fas fa-exclamation-triangle text-sm" />
 			{/if}
@@ -73,7 +74,7 @@
 		</div>
 
 		<div class="card-actions justify-end">
-			<a class="btn btn-secondary text-lg" href={song.external_urls.spotify}
+			<a class="btn btn-secondary text-lg" target="_blank" href={song.external_urls.spotify}
 				><i class="fas fa-globe" /></a
 			>
 			<a class="btn btn-primary text-lg" href={song.uri}><i class="fas fa-play" /></a>

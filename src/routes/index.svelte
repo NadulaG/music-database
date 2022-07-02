@@ -1,14 +1,14 @@
 <script>
-    import SongCard from '../components/songCard.svelte';
+	import SongCard from '../components/songCard.svelte';
 
 	let searchTerm = '';
-    let results;
+	let results;
 
-    const handleSearch = async () => {
-        const response = await fetch(`/api/${searchTerm}`);
-        const data = await response.json();
-        results = data.data.tracks.items;
-    }
+	const handleSearch = async () => {
+		const response = await fetch(`/api/${searchTerm}`);
+		const data = await response.json();
+		results = data.data.tracks.items;
+	};
 </script>
 
 <svelte:head>
@@ -20,13 +20,13 @@
 	bind:value={searchTerm}
 	on:change={handleSearch}
 	type="text"
-	placeholder="Search Movies"
+	placeholder="Search"
 />
 
 {#if results}
-    <div class="flex flex-wrap justify-center gap-5">
-        {#each results as song}
-            <SongCard {song} />
-        {/each}
-    </div>
+	<div class="flex flex-wrap justify-center gap-5">
+		{#each results as song}
+			<SongCard {song} />
+		{/each}
+	</div>
 {/if}
