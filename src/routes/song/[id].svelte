@@ -40,15 +40,21 @@
 		</div>
 
 		<div class="flex flex-row flex-wrap gap-2 mb-3">
-			<div class="card w-48 h-fit bg-base-100 shadow-xl">
+			<div class="card w-48 h-fit bg-base-100 shadow-xl overflow-visible">
 				<div class="card-body">
 					<div class="flex flex-col text-center justify-center gap-5 mx-auto">
 						<h2 class="card-title"><i class="fas fa-fire" /> Popularity</h2>
 						<div
-							class="radial-progress bg-primary text-primary-content border-4 border-primary mx-auto"
-							style="--value:{song.popularity};"
+							class="tooltip tooltip-left z-10"
+							data-tip="The popularity is calculated by algorithm and is based, in the most part, on
+						the total number of plays the track has had and how recent those plays are."
 						>
-							{song.popularity}%
+							<div
+								class="radial-progress bg-primary text-primary-content border-4 border-primary mx-auto"
+								style="--value:{song.popularity};"
+							>
+								{song.popularity}%
+							</div>
 						</div>
 					</div>
 				</div>

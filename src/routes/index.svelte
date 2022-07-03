@@ -16,7 +16,7 @@
 </svelte:head>
 
 <input
-	class="w-full rounded-md text-lg p-4 border-2 border-gray-200 mb-5 text-base-200"
+	class="w-full rounded-md text-lg p-4 border-2 border-gray-200 mb-5 text-primary-content"
 	bind:value={searchTerm}
 	on:change={handleSearch}
 	type="text"
